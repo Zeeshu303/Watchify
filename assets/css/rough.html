@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .pencil-nib-corner {
+        margin: 50%;
+  position: relative;
+  background-color: #f0e68c; /* Light yellow color for the pencil body */
+  padding: 20px;
+  border: 2px solid #d8b739; /* Darker yellow for the pencil outline */
+  width: 200px; /* Set width as needed */
+  height: 30px; /* Set height as needed */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.pencil-nib-corner::before {
+  content: '';
+  position: absolute;
+  bottom: 100%; /* Position it above the div */
+  left: 0%; /* Center it horizontally */
+  
+  border-left: 10px solid transparent; /* Left side of the nib */
+  border-right: 0px solid transparent; /* Right side of the nib */
+  border-bottom: 20px solid #d8b739; /* Color of the nib */
+  width: 10%;
+}
+</style>
+<body>
+    <div class="pencil-nib-corner">
+        Your content here
+      </div>
+</body>
+</html>
